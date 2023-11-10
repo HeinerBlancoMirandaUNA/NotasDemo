@@ -71,7 +71,6 @@ void Semester::detectLocations() {
 
 void Semester::saveByCampus(string thisFile) {
 	detectLocations();
-	cout << " \n\n\n LOCATION -  SANZIBAR ISLAND \n\n\n";
 	DoublyLinkedList<Student> toSave;
 	Student newStudent;
 	Locations.go(First);
@@ -93,8 +92,19 @@ void Semester::saveByCampus(string thisFile) {
 
 }
 
-void Semester::displayStudent(string name, string lastName) {
+void Semester::displayStudent(string name, string lastName, string campus) {
 
+	cout << "\n#############\n";
+	Students.go(First);
+	while (Students.isValid()) {
 
+		bool show = Students.getItem().name == name &&
+			Students.getItem().lastName == lastName &&
+			Students.getItem().campus == campus;
+
+		if (show) {	cout << StudentToLine(Students.getItem()) << "\n"; }
+		
+		Students.go(Next);
+	}
 
 }

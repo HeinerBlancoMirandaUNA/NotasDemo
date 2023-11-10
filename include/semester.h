@@ -16,7 +16,7 @@ public:
 	
 	void saveByCampus(string thisFile);
 	void displayByCourse();
-	void displayStudent(string name, string lastName);
+	void displayStudent(string name, string lastName, string campus);
 	
 	void displayAll();
 };
