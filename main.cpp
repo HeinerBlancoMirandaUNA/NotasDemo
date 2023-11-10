@@ -13,6 +13,5 @@ int main()
 	current.displayByCourse();
 	current.displayStudent("Silvain","Wiggin", "COTO");
 	current.saveByCampus("Guardar por Campus.csv");
-	current.saveToFile("prueba de basura.csv", current.Students);
 
 }
