@@ -127,7 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="include\file_load_and_save.cpp" />
+    <ClCompile Include="include\semester.cpp" />
+    <ClCompile Include="include\student.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\doubly_linked_list.h" />
+    <ClInclude Include="include\file_load_and_save.h" />
+    <ClInclude Include="include\node.h" />
+    <ClInclude Include="include\semester.h" />
+    <ClInclude Include="include\student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

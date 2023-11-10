@@ -1,6 +1,10 @@
 #include <iostream>
+#include "include/semester.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+	Semester current;
+
+
 }
