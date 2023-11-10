@@ -73,8 +73,6 @@ Student FileLoadAndSave::lineToStudent(string line) {
 
 string FileLoadAndSave::StudentToLine(Student thisStudent) {
 
-	thisStudent.status = "REVISADO";
-
 	return
 		thisStudent.campus + ","
 		+ thisStudent.id + ","

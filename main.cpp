@@ -11,6 +11,7 @@ int main()
 	current.readFile("./data/MOCK_DATA.csv");
 	
 	current.displayByCourse();
+	current.saveByCampus("Guardar por Campus.csv");
 	current.saveToFile("prueba de basura.csv", current.Students);
 
 }
