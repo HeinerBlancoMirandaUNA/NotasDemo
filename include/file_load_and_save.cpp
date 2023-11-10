@@ -1,27 +1,15 @@
 #include "file_load_and_save.h"
 
 FileLoadAndSave::FileLoadAndSave() {
-	resetData();
+
 }
 
 FileLoadAndSave::~FileLoadAndSave() {
 
 }
 
-void FileLoadAndSave::resetData() {
-	fileContents.clear();
-	filename = "";
-	fileReady = false;
-}
-
-bool FileLoadAndSave::fileIsLoaded() {
-
-	return fileReady;
-
-}
-
 void FileLoadAndSave::readFile(string thisFile) {
-	resetData();
+
 	ifstream File(thisFile.c_str());
 
 	if (File.fail()) {
@@ -35,19 +23,19 @@ void FileLoadAndSave::readFile(string thisFile) {
 		Students.add(lineToStudent(currentLine));
 	}
 
-	fileReady = true;
+
 	File.close();
 }
 
-void FileLoadAndSave::saveToFile(string thisFile, vector<string> thisData) {
+void FileLoadAndSave::saveToFile(string thisFile, DoublyLinkedList<Student>& thisData) {
 
 	ofstream File(thisFile.c_str());
 
-	string currentLine;
-	while (!thisData.empty()) {
-		currentLine = thisData[0];
-		File << currentLine << std::endl;
-		thisData.erase(thisData.begin());
+	thisData.go(First);
+	File << "sede, cedula, nombre, lastname, course, nota, estado, puntos obtenidos, puntos totales" << std::endl;
+	while (thisData.isValid()) {
+		File << StudentToLine(thisData.getItem()) << std::endl;
+		thisData.go(Next);
 	}
 
 	File.close();

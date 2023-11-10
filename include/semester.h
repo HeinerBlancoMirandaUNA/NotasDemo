@@ -3,6 +3,9 @@
 
 class Semester : public FileLoadAndSave
 {
+private:
+	DoublyLinkedList<Student> Courses;
+
 public:
 	Semester();
 	~Semester();
