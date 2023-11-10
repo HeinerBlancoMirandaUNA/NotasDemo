@@ -4,11 +4,14 @@
 class Semester : public FileLoadAndSave
 {
 private:
-	DoublyLinkedList<Student> Courses;
+	DoublyLinkedList<string> Courses;
+	void detectCourses();
 
 public:
 	Semester();
 	~Semester();
+	
+	void displayByCourse();
 	void displayAll();
 };
 

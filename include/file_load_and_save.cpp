@@ -20,7 +20,7 @@ void FileLoadAndSave::readFile(string thisFile) {
 	string currentLine;
 	getline(File, currentLine);
 	while (getline(File, currentLine)) {
-		Students.add(lineToStudent(currentLine));
+		if (currentLine.length() > 1) { Students.add(lineToStudent(currentLine));; }
 	}
 
 
@@ -72,6 +72,8 @@ Student FileLoadAndSave::lineToStudent(string line) {
 }
 
 string FileLoadAndSave::StudentToLine(Student thisStudent) {
+
+	thisStudent.status = "REVISADO";
 
 	return
 		thisStudent.campus + ","

@@ -4,9 +4,13 @@
 int main()
 {
 	Semester current;
+	current.readFile("./data/20231020.csv");
 	current.readFile("./data/final.csv");
-	current.readFile("./data/final.csv");
-	current.displayAll();
+	current.readFile("./data/finalfinal.csv");
+	current.readFile("./data/masArchivos.csv");
+	current.readFile("./data/MOCK_DATA.csv");
+	
+	current.displayByCourse();
 	current.saveToFile("prueba de basura.csv", current.Students);
 
 }
