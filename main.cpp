@@ -3,8 +3,8 @@
 
 int main()
 {
-
 	Semester current;
-
+	current.readFile("./data/final.csv");
+	current.displayAll();
 
 }

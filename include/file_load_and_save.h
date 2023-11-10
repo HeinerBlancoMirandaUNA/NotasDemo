@@ -23,9 +23,9 @@ public:
 
 	bool fileIsLoaded();
 	void readFile(string thisFile);
+	void saveToFile(string thisFile, vector<string> data);
 	Student lineToStudent(string line);
 	string StudentToLine(Student thisStudent);
-	void saveToFile(string thisFile, vector<string> data);
 
 private:
 	bool fileReady;

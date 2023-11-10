@@ -6,5 +6,6 @@ class Semester : public FileLoadAndSave
 public:
 	Semester();
 	~Semester();
+	void displayAll();
 };
 

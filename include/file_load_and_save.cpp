@@ -30,8 +30,9 @@ void FileLoadAndSave::readFile(string thisFile) {
 	}
 
 	string currentLine;
+	getline(File, currentLine);
 	while (getline(File, currentLine)) {
-		fileContents.push_back(currentLine);
+		Students.add(lineToStudent(currentLine));
 	}
 
 	fileReady = true;
