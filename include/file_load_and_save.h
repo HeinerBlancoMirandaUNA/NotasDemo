@@ -19,7 +19,7 @@ private:
 public:
 	FileLoadAndSave();
 	~FileLoadAndSave();
-	DoublyLinkedList<Student> Students;
+	DoublyLinkedList<Student> Students;//NOTE: Debe usar encapsulamiento
 	string StudentToLine(Student thisStudent);
 
 	void readFile(string thisFile);

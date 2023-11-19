@@ -22,6 +22,7 @@ void Semester::displayByCourse() {
 		cout << "\n" << Courses.getItem() << "\n\n";
 		Students.go(First);
 		while (Students.isValid()) {
+			//NOTE: código muy anidado
 			if (Courses.getItem() == Students.getItem().course) { cout << StudentToLine(Students.getItem()) << "\n"; }
 			Students.go(Next);
 		}/**/
@@ -37,7 +38,7 @@ void Semester::detectCourses() {
 		
 		Courses.go(First);
 		bool addCourse = true;
-		while (Courses.isValid()) {
+		while (Courses.isValid()) {//NOTE: código muy anidado
 			if (Courses.getItem() == Students.getItem().course) { addCourse = false; }
 			Courses.go(Next);
 		}
@@ -56,7 +57,7 @@ void Semester::detectLocations() {
 
 		Locations.go(First);
 		bool addLocation = true;
-		while (Locations.isValid()) {
+		while (Locations.isValid()) {//NOTE: código muy anidado
 			if (Locations.getItem() == Students.getItem().campus) { addLocation = false; }
 			Locations.go(Next);
 		}
@@ -76,7 +77,7 @@ void Semester::saveByCampus(string thisFile) {
 	Locations.go(First);
 	while (Locations.isValid()) {
 		Students.go(First);
-		while (Students.isValid()) {
+		while (Students.isValid()) {//NOTE: código muy anidado
 			if (Locations.getItem() == Students.getItem().campus) { 
 				newStudent = Students.getItem();
 				newStudent.status = "REVISADO";

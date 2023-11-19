@@ -49,7 +49,7 @@ Student FileLoadAndSave::lineToStudent(string line) {
 	Student toReturn;
 	while (!(counter > line.size())) {
 		if ((line[counter] == ',')or(counter == line.size())) {
-
+			//NOTE: totalLines siempre va a ser cero
 			if (totalLines == 0) { toReturn.campus = currentLine; }
 			if (totalLines == 1) { toReturn.id = currentLine; }
 			if (totalLines == 2) { toReturn.name = currentLine; }

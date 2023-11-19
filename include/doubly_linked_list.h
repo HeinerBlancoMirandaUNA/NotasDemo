@@ -11,12 +11,12 @@ enum ListPosition {
 };
 
 template <typename T>
-class DoublyLinkedList {
+class DoublyLinkedList { //NOTE: Doubly es un typo error
 private:
     Node<T>* head;
     Node<T>* tail;
     Node<T>* current;
-    T dummy;
+    T dummy;//NOTE: nombre no referente
     int listSize;
 
     void deleteOperation (){
@@ -52,7 +52,7 @@ private:
 public:
     DoublyLinkedList() : head(nullptr), tail(nullptr), current(nullptr) {
         listSize = 0;
-        //std::cout << "!!!!!ListCreated" ;
+        //std::cout << "!!!!!ListCreated" ;//NOTE: eliminar codigo muerto
     }
 
     virtual ~DoublyLinkedList() {
@@ -77,7 +77,7 @@ public:
 
     }
 
-    void del(int toDelete) {
+    void del(int toDelete) {//NOTE: nombre no descriptivo
         go(First);
         int counter = 1;
         while (isValid()) {

@@ -5,7 +5,7 @@ class Node {
 public:
     T data;
     Node<T>* next;
-    Node<T>* previous;
+    Node<T>* previous;//NOTE: Debe usar encapsulamiento
 
     Node(T value) : data(value), next(nullptr), previous(nullptr) {}
 };
